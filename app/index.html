@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Приглашаем Вас играть в азартные игры онлайн в Казино Восток. Вашему вниманию представлены игровые автоматы, рулетка, покер и  другие настольные и карточные игры."
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,latin"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>Регистрация в Казино Восток</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__wrap">
+            <a href="#" class="logo header__logo">
+              <img src="./img/logo.png" alt="logo" />
+            </a>
+          </div>
+        </div>
+      </header>
 
-  @@include('./htmlParts/header.html')
-  <script src="js/main.js"></script>
-</body>
+      <main>
+        <div class="wheel__wrap">
+          <img class="wheel__win" src="./img/win-sector.png" alt="win sector" />
+          <img class="wheel" src="./img/wheel.jpeg" alt="wheel" />
+          <div class="wheel__btn_wrap">
+            <img class="wheel__btn" src="./img/btn.png" alt="Button" />
+            <img
+              class="wheel__btn_active"
+              src="./img/btn-hover.png"
+              alt="Button"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="popup">
+      <div class="popup__wrap">
+        <img src="./img/logo.png" alt="Logo" class="popup__logo" />
+        <img src="./img/chest.png" alt="Chest" class="popup__chest" />
+        <p class="popup__title">на 1й депозит</p>
+        <a href="#" class="btn popup__btn">забрать бонус</a>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
 </html>

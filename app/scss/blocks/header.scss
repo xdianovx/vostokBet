@@ -1,0 +1,225 @@
+.header {
+  padding: 0px 0;
+  height: 122px;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo {
+  width: 142px;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 1% auto 0;
+  position: relative;
+}
+
+.wheel__wrap {
+  display: block;
+  position: relative;
+}
+
+.wheel {
+  margin: 0 auto 0;
+  //   width: 100%;
+  display: block;
+  max-width: 560px;
+  z-index: 1;
+  border-radius: 50%;
+  animation: 15s spininnn infinite linear;
+  &.active {
+    animation: 2s spinninWininn ease-out;
+  }
+}
+
+.wheel__win {
+  position: absolute;
+  top: -25px;
+  z-index: 2;
+  width: 282px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wheel__btn_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 283px;
+  max-height: 282px;
+  cursor: pointer;
+  z-index: 3;
+  &:hover {
+    .wheel__btn {
+      display: none;
+    }
+    .wheel__btn_active {
+      display: block;
+    }
+  }
+}
+
+.wheel__btn_active {
+  display: none;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+  height: 100%;
+  z-index: 300;
+  &.active {
+    display: block;
+  }
+}
+.popup__wrap {
+  max-width: 500px;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 3, 156, 0.9) 0%,
+    rgba(17, 1, 53, 0.8) 100%
+  );
+  min-height: 555px;
+  margin: 40px auto 0;
+  padding: 30px 40px;
+  border: 1px solid #0030ff;
+  border-radius: 35px;
+}
+.popup__logo {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 20px;
+}
+.popup__chest {
+  margin: 0 auto;
+  display: block;
+  max-width: 352px;
+}
+.popup__title {
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Roboto", "Open Sans", Verdana, Geneva, sans-serif;
+}
+.btn.popup__btn {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Roboto", "Open Sans", Verdana, Geneva, sans-serif;
+  color: #fff;
+  display: block;
+  margin: 25px auto 10px;
+  max-width: 400px;
+  padding: 20px 60px;
+  text-align: center;
+  white-space: nowrap;
+  border-bottom: 1px solid #ff7b7b;
+  border-radius: 35px;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #ff004c 0%, #e60406 100%);
+  transition: all 0.3s ease;
+  &:hover {
+    background: linear-gradient(
+      to bottom,
+      #da0206 0%,
+      #ed0125 49%,
+      #fc003e 100%
+    );
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wheel {
+    max-width: 480px;
+  }
+
+  .wheel__win {
+    width: 242px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wheel {
+    max-width: 380px;
+  }
+  .wheel__win {
+    max-width: 200px;
+  }
+
+  .wheel__btn_wrap {
+    max-width: 180px;
+  }
+
+  .popup__wrap {
+    max-width: 290px;
+    padding: 10px 20px;
+    min-height: auto;
+  }
+
+  .popup__logo {
+    max-width: 120px;
+  }
+
+  .popup__title {
+    margin-top: 10px;
+  }
+
+  .btn.popup__btn {
+    font-size: 18px;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wheel {
+    max-width: 290px;
+    width: 100%;
+  }
+  .wheel__win {
+    max-width: 140px;
+    width: 100%;
+    top: -15px;
+  }
+
+  .wheel__btn_wrap {
+    max-width: 150px;
+  }
+}
+
+@keyframes spininnn {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinninWininn {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(1080deg);
+  }
+}

@@ -1,9 +1,14 @@
-@import '../../node_modules/normalize.css/normalize';
+@import "../../node_modules/normalize.css/normalize";
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background: #000 url("../img/bg.jpeg") 50% 0 no-repeat;
 }
 
 .container {
@@ -45,4 +50,17 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: 100%;
+    background: #000 url("../img/bg-mob.jpeg") no-repeat 50% 0 / cover;
+  }
 }
